@@ -25,9 +25,10 @@ contract StorageFactory{
         simpleStorage.store(_simpleStorageNumber);
     }
 
-     function sgGet(uint256 _simpleStorageIndex) public view returns (uint256) {
-        SimpleStorage simpleStorage = simpleStorageArray[_simpleStorageIndex];
-        return simpleStorage.retrieve();
+
+    function sgGet(uint256 _simpleStorageIndex) public view returns (uint256) {
+        return simpleStorageArray[_simpleStorageIndex].retrieve();    
     }
+
 
 }

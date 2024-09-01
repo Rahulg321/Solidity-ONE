@@ -34,7 +34,7 @@ contract SimpleStorage{
     }
 
 
-    // a view function/keyword implies that we are only going to read state from this function and not do anything
+    // a view function/keyword implies that we are only going to read state from this function and not do any mutation
 
     // view and pure function disallow modification of state
 
@@ -58,7 +58,6 @@ contract SimpleStorage{
 
         // since we dont modify this name variable after this function, we can keep it as memory or even calldata
 
-        _name = "string";
 
         People memory newPerson = People({favoriteNumber:_favoriteNumber,name: _name,designation:_designation});
         persons.push(newPerson);
